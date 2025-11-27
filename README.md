@@ -1,111 +1,97 @@
 # 🪐CPSC 453 Assignment 4: Virtual Orrery ###
 
 ![OpenGL](https://img.shields.io/badge/OpenGL-3.3-green?logo=opengl) ![Language](https://img.shields.io/badge/Language-C%2B%2B-blue?logo=c%2B%2B) ![License](https://img.shields.io/badge/Course-CPSC453-orange)
+
 This project is a 3D solar system simulation developed as part of CPSC 453 at the University of Calgary. The application renders a realistic model of the Sun-Earth-Moon system with accurate orbital mechanics, lighting, and textures.
 
 ---
 
-## Features ##
+## ✨Features ##
+### 🌌 Celestial Simulation
+* **Realistic Texturing:** High-resolution textures for the Sun, Earth, and Moon set against a starry skybox.
+* **Scale & Distance:** Proper relative sizing and spatial relationships.
+* **Orbital Mechanics:**
+    * Hierarchical transformation system (Scene Graph).
+    * Independent rotation periods and axial tilts.
+    * **[Bonus]** Elliptical orbits featuring accurate Keplerian motion.
 
-1. **Celestial Bodies**:
-   - Realistically textured Sun, Earth, and Moon
-   - Starry background skybox
-   - Proper relative sizing and distances
+### 🎨 Rendering Engine
+* **Phong Shading:** Implements diffuse, specular, and ambient lighting components.
+* **Lighting:** Point light source originating from the Sun's center.
+* **[Bonus]** **Night Lights:** City lights appear dynamically on Earth's dark side.
+* **[Bonus]** **Atmosphere:** Animated cloud layers with independent rotation.
 
-2. **Orbital Mechanics**:
-   - Hierarchical transformation system for orbits
-   - Axial tilts and orbital inclinations (exaggerated for visibility)
-   - Elliptical orbits with Keplerian motion [bonus]
-   - Independent rotation periods
+### 🎥 Camera & Interface
+* **Turntable Camera:** Spherical coordinate system with smooth zoom and orbit.
+* **Focus System:** Smooth transitions to focus on the Sun, Earth, or Moon.
+* **Interactive UI:** Full control over time scale, rendering features, and orbital eccentricity.
+---
 
-3. **Rendering**:
-   - Phong shading model with diffuse, specular, and ambient components
-   - Point light source at the Sun's center
-   - Day/night cycle with city lights on Earth's dark side [bonus]
-   - Animated cloud layer for Earth [bonus]
+## 🎮 Controls
 
-4. **Camera System**:
-   - Turntable orbit camera with zoom controls
-   - Ability to focus on Sun, Earth, or Moon
-   - Smooth camera transitions
-
-5. **User Interface**:
-   - Animation controls (play/pause/reset)
-   - Adjustable simulation speed
-   - Toggleable features (clouds, night lights)[bonus]
-   - Orbit eccentricity controls [bonus]
+| Input | Action |
+| :--- | :--- |
+| **Right Mouse Drag** | Orbit camera around the current focus point |
+| **Mouse Wheel** | Zoom In / Out |
+| **Play / Pause** | Toggle simulation animation |
+| **Reset** | Return simulation to initial state |
+| **Speed Slider** | Adjust simulation time scale |
+| **Toggle: Night Lights** | Enable/Disable city lights on Earth's shadow side |
+| **Toggle: Clouds** | Enable/Disable Earth's atmospheric layer |
+| **Focus Select** | Smoothly pan camera to Sun, Earth, or Moon |
+| **Eccentricity** | Adjust the ellipticity of orbits (Keplerian effect) |
 
 ---
 
-### Controls ###
+## 🏗️ Implementation Architecture
 
-- **Right Mouse Drag**: Rotate camera around focus point
-- **Mouse Wheel**: Zoom in/out
-- **UI Controls**:
-  - Play/Pause: Toggle animation
-  - Reset: Reset simulation to initial state
-  - Animation Speed: Adjust simulation speed
-  - Show Night Lights: Toggle city lights on Earth's night side [bonus]
-  - Show Clouds: Toggle Earth's cloud layer [bonus]
-  - Camera Focus: Select which celestial body to center on [bonus]
-  - Orbit Eccentricity: Adjust how elliptical orbits are [bonus]
+### 1. The SolarSystem Class
+Acts as the central engine, managing the lifecycle of all celestial bodies. It handles the main loop, coordinates the scene graph, and manages the global time state for frame-rate independent animation.
 
----
+### 2. Turntable Camera
+A spherical coordinate camera system designed for orbital observation. It features a "Follow" mode that locks onto moving celestial bodies and uses smooth interpolation to transition between targets without snapping.
 
-### Implementation ###
+### 3. Advanced Shader System (GLSL)
+* **Sun:** Uses emissive shading to act as a light source.
+* **Planets:** Uses standard Phong lighting.
+* **Blending:** Handles complex texture mixing for the Day/Night cycle and transparency for cloud layers.
 
-Key components:
-
-1. **SolarSystem Class**:
-   - Manages all celestial bodies and their transformations
-   - Handles animation timing and state
-   - Coordinates rendering of all objects
-
-2. **TurnTableCamera**:
-   - Spherical coordinate camera system
-   - Smooth orbiting and zooming
-   - Target following for celestial bodies
-
-3. **Shader System**:
-   - Phong shading implemented in GLSL
-   - Special handling for Sun (emissive) vs planets (lit)
-   - Cloud animation and blending effects
-   - Day/night texture blending
-
-4. **Geometry Generation**:
-   - UV-mapped spheres with proper normals
-   - Efficient indexed rendering
+### 4. Geometry & Math
+Utilization of UV-mapped spheres with precise normal calculation. All movement is driven by GLM vector and matrix mathematics.
 
 ---
 
-### Dependencies ###
+## 🛠️ Dependencies & Compilation
 
-- GLFW: For window and input management
-- GLAD: For loading OpenGL functions
-- GLM: For vector and matrix math
-- OpenGL 3.3+ Core Profile
-- stb_image: For texture loading
+This project relies on the standard OpenGL stack:
+* **GLFW:** Windowing and Input
+* **GLAD:** OpenGL Loading Library
+* **GLM:** Mathematics (Vectors/Matrices)
+* **stb_image:** Texture loading
 
----
+### 🟦 Visual Studio (Windows)
+1.  Open the project in **Visual Studio 2022**.
+2.  Ensure dependencies (GLFW, GLAD, GLM) are properly configured.
+3.  Select **x64** or **x86** build configuration.
+4.  **Build & Run**.
 
-## Compilation ##
+### 🐧 CMake (Linux / macOS)
+```bash
+# 1. Create build directory
+mkdir build && cd build
 
-Using Visual Studio:
-1. Open the project in Visual Studio 2022
-2. Ensure dependencies (GLFW, GLAD, GLM) are properly configured
-3. Build the solution
-4. Run the program
+# 2. Configure project
+cmake ..
 
-Using CMake (Linux/macOS):
-1. Create build directory: `mkdir build` then `cd build`
-2. Configure: `cmake ..`
-3. Build: `cmake --build .`
-4. Run: `./cpsc453-solarsystem`
+# 3. Compile
+cmake --build .
 
----
+# 4. Run application
+./cpsc453-solarsystem
 
-### AI Usage ###
+### 🤖 AI Development Log ##
 
+This project utilized AI assistance for debugging complex linear algebra and optimizing rendering techniques. Below is a log of key challenges solved.
 
 When implementing Phong shading, my specular highlights were behaving incorrectly when the Earth and Moonrotated. Instead of the highlights moving smoothly with the Sun, they appeared misaligned and inconsistent. With the help of ChatGPT, this solution ensured realistic specular reflections while maintaining smooth rendering. The debugging process also deepened my understanding of normal transformations, which later helped when implementing advanced features like normal mapping.
 
