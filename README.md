@@ -4,9 +4,9 @@
 
 This project is a 3D solar system simulation developed as part of CPSC 453 at the University of Calgary. The application renders a realistic model of the Sun-Earth-Moon system with accurate orbital mechanics, lighting, and textures.
 
-
+<p align="center">
 https://github.com/user-attachments/assets/3d426182-af17-4331-97d1-b5fc086f3b98
-
+</p>
 
 ---
 
@@ -49,6 +49,10 @@ https://github.com/user-attachments/assets/3d426182-af17-4331-97d1-b5fc086f3b98
 
 ## 🏗️ Implementation Architecture
 
+<p align="center">
+https://github.com/user-attachments/assets/e90e4aeb-2ffb-4930-b271-6ea7e7fd5a9e
+</p>
+
 ### 1. The SolarSystem Class
 Acts as the central engine, managing the lifecycle of all celestial bodies. It handles the main loop, coordinates the scene graph, and manages the global time state for frame-rate independent animation.
 
@@ -62,6 +66,10 @@ A spherical coordinate camera system designed for orbital observation. It featur
 
 ### 4. Geometry & Math
 Utilization of UV-mapped spheres with precise normal calculation. All movement is driven by GLM vector and matrix mathematics.
+
+<p align="center">
+https://github.com/user-attachments/assets/14a32e4f-a5ff-4982-9db0-84fe5634431d
+</p>
 
 ---
 
