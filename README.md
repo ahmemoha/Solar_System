@@ -78,17 +78,21 @@ This project relies on the standard OpenGL stack:
 ### 🐧 CMake (Linux / macOS)
 ```bash
 # 1. Create build directory
+```
 mkdir build && cd build
-
+```
 # 2. Configure project
+```
 cmake ..
 
 # 3. Compile
+```
 cmake --build .
-
+```
 # 4. Run application
+```
 ./cpsc453-solarsystem
-
+```
 ### 🤖 AI Development Log ##
 
 This project utilized AI assistance for debugging complex linear algebra and optimizing rendering techniques. Below is a log of key challenges solved.
