@@ -1,5 +1,6 @@
-# CPSC 453 Assignment 4: Virtual Orrery ###
+# 🪐CPSC 453 Assignment 4: Virtual Orrery ###
 
+![OpenGL](https://img.shields.io/badge/OpenGL-3.3-green?logo=opengl) ![Language](https://img.shields.io/badge/Language-C%2B%2B-blue?logo=c%2B%2B) ![License](https://img.shields.io/badge/Course-CPSC453-orange)
 This project is a 3D solar system simulation developed as part of CPSC 453 at the University of Calgary. The application renders a realistic model of the Sun-Earth-Moon system with accurate orbital mechanics, lighting, and textures.
 
 ---
