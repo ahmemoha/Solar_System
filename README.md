@@ -5,7 +5,7 @@
 This project is a 3D solar system simulation developed as part of CPSC 453 at the University of Calgary. The application renders a realistic model of the Sun-Earth-Moon system with accurate orbital mechanics, lighting, and textures.
 
 <p align="center">
-<img width="720" height="502" alt="Screenshot 2025-11-26 210506" src="https://github.com/user-attachments/assets/99d92d74-b8c4-4c53-942e-12ca827478ec" />
+<img width="800" height="502" alt="Screenshot 2025-11-26 210506" src="https://github.com/user-attachments/assets/99d92d74-b8c4-4c53-942e-12ca827478ec" />
 </p>
 
 <p align="center">
