@@ -295,19 +295,35 @@ Edge Cases:
 ## References ##
 
 Coordinate Systems: https://learnopengl.com/Getting-started/Coordinate-Systems  
+
 Camera: https://learnopengl.com/Getting-started/Camera  
+
 Lighting: https://learnopengl.com/Lighting/Basic-Lighting  
+
 Blending: https://learnopengl.com/Advanced-OpenGL/Blending
+
 LearnOpenGL - Coordinate Systems (n.d.). https://learnopengl.com/Getting-started/Coordinate-Systems
+
 Tutorial 6 : Keyboard and Mouse. Opengl-Tutorial.org. https://www.opengl-tutorial.org/beginners-tutorials/tutorial-6-keyboard-and-mouse/
+
 Tutorial 17 : Rotations. (n.d.). https://www.opengl-tutorial.org/intermediate-tutorials/tutorial-17-quaternions/
+
 OpenGL 4 Reference Pages: https://registry.khronos.org/OpenGL/
+
 University of Calgary. CPSC 453: Course notes. D2L Brightspace. https://d2l.ucalgary.ca/d2l/le/content/647982/viewContent/6819150/View
+
 College Algebra: https://courses.lumenlearning.com/waymakercollegealgebra/chapter/equations-of-ellipses/
+
 Elliptic orbit: https://space.fandom.com/wiki/Elliptic_orbit
+
 Sphere: https://www.songho.ca/opengl/gl_sphere.html
+
 Chapter 15: Hierarchical Transformations: https://graphicscompendium.com/opengl/13-hierarchical-modeling
+
 Shaders: https://learnopengl.com/Getting-started/Shaders
+
 Basic Lighting: https://learnopengl.com/Lighting/Basic-Lighting
+
 Orbits and Kepler's Laws - NASA Science Kepler's Laws: https://science.nasa.gov/solar-system/orbits-and-keplers-laws/#:~:text=Kepler's%20Laws%20of%20Planetary%20Motion,-The%20story%20of&text=They%20describe%20how%20(1)%20planets,the%20size%20of%20its%20orbit.
+
 Kepler's Three Laws: https://www.physicsclassroom.com/class/circles/lesson-4/kepler-s-three-laws
